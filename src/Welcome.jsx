@@ -4,7 +4,11 @@ function Welcome() {
   return (
     <div>
       <div className="max-w-32 mx-auto">
-        <img src={logo} alt="" className="rounded-ss-full rounded-r-full mt-5 animate-none" />
+        <img
+          src={logo}
+          alt=""
+          className="rounded-ss-full rounded-r-full mt-5 animate-none"
+        />
       </div>
       <div className="max-w-screen-sm mx-auto p-10 text-center flex flex-col items-center justify-center my-1 border-black rounded-2xl shadow-md sm:max-w-screen-sm lg:max-w-screen-xl lg:my-30">
         <h1 className="text-4xl font-bold mb-8 text-white">
