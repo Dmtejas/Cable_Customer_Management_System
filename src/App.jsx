@@ -1,11 +1,14 @@
 import Welcome from "./Welcome"
 import AddUser from "./AddUser"
+import {Routes, Route} from "react-router-dom"
 
 function App() {
   return (
     <div>
-      <Welcome></Welcome>
-      <AddUser></AddUser>
+        <Routes>
+            <Route path="/" element={<Welcome />}></Route>
+            <Route path="/addUser" element={<AddUser />} />
+        </Routes>
     </div>
   )
 }

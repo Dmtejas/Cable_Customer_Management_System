@@ -1,6 +1,8 @@
 import logo from "./assets/logo.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Welcome() {
+  const navigate = useNavigate()
   return (
     <div>
       <div className="max-w-32 mx-auto">
@@ -25,7 +27,10 @@ function Welcome() {
         <button className="bg-white mt-16 px-8 py-2 rounded-md text-center font-semibold transition-all duration-300 ease-in-out  hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
           View Dashboard
         </button>
-        <button className="bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold transition-all duration-300 ease-in-out  hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
+        <button type="button" onClick={() => {
+          console.log('BUTTON CLICKED');
+          
+          navigate("/addUser")}} className="bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold transition-all duration-300 ease-in-out  hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
           + Add Customer
         </button>
         <button className="transition ease-in-out duration-300 bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
