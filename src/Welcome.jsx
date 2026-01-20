@@ -33,7 +33,7 @@ function Welcome() {
           navigate("/addUser")}} className="bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold transition-all duration-300 ease-in-out  hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
           + Add Customer
         </button>
-        <button className="transition ease-in-out duration-300 bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
+        <button onClick={() => {navigate("/search-user")}} className="transition ease-in-out duration-300 bg-white mt-5 px-8 py-2 rounded-md text-center font-semibold hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg">
           Search Customer
         </button>
         <footer className="mt-40 text-white">
