@@ -31,10 +31,10 @@ const Header = () => {
         `}
         style={{ transformOrigin: "top" }}
       >
-        <button className="border w-full" onClick={() => navigate('/')}>Home</button>
-        <button className="border w-full" onClick={() => navigate('/')}>Dashboard</button>
-        <button className="border w-full" onClick={() => navigate('/addUser')}>Add Customer</button>
-        <button className="border w-full" onClick={() => navigate('/search-user')}>Search</button>
+        <button className="border border-t-0 border-r-0 border-l-0 w-full text-start" onClick={() => navigate('/')}>Home</button>
+        <button className="border border-t-0 border-r-0 border-l-0 w-full text-start" onClick={() => navigate('/')}>Dashboard</button>
+        <button className="border border-t-0 border-r-0 border-l-0 w-full text-start" onClick={() => navigate('/addUser')}>Add Customer</button>
+        <button className="border border-t-0 border-r-0 border-l-0 w-full text-start" onClick={() => navigate('/search-user')}>Search</button>
       </div>
     </div>
   );

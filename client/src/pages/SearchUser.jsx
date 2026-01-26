@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Card from "./Components/Card";
-import Header from "./Components/Header";
+import Card from "../Components/Card";
+import Header from "../Components/Header";
 
 const SearchUser = () => {
     const initialState = {
@@ -166,6 +166,10 @@ const SearchUser = () => {
                 </form>
                 <Card data={filteredState} />
             </div>
+            <footer className="mt-20 lg:mt-40 text-white text-center">
+                    <p>©2026 Cable Network Management System.</p>
+                    <p>Developed by Tejas</p>
+                </footer>
         </div>
     );
 };

@@ -1,18 +1,18 @@
 import { useState } from "react";
-import Header from "./Components/Header";
+import Header from "../Components/Header";
 
 const AddUser = () => {
     const initialState = {
         name: "",
+        phone: "",
+        area: "",
         number: "",
-        location: "",
-        STN: "",
         monthlyCharge: "",
         pendingAmount: "",
     };
 
     const [formData, setFormData] = useState(initialState);
-
+    const [success, setSuccess] = useState(null)
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => {
@@ -25,7 +25,7 @@ const AddUser = () => {
 
     const sendFormData = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/customers", {
+            const response = await fetch("/api/customers", {
             method: 'POST',
             headers: {
                 'Content-Type': "application/json"
@@ -37,12 +37,25 @@ const AddUser = () => {
             console.log("Form data sent to backend succesfully");
             const message = await response.json();
             console.log(message);
+            setSuccess(`success`);
             
         } else {
-            throw new Error("Error sending data to the backend");
+            setSuccess(`failure`);
         }
         } catch(err) {
             console.log(err);
+        }
+    }
+
+    const renderResult = () => {
+        if(success == 'success') {
+            return <div>
+                <h1 className="text-xl text-center font-semibold text-green-500">Customer added successfully</h1>
+            </div>
+        } else if(success == `failure`) {
+            return <div className="">
+                <h1 className="text-xl font-semibold text-red-700 text-center">Customer added successfully</h1>
+            </div>
         }
     }
 
@@ -177,8 +190,8 @@ const AddUser = () => {
 
                             <input
                                 onChange={handleChange}
-                                name="number"
-                                value={formData.number}
+                                name="phone"
+                                value={formData.phone}
                                 className="
                                     p-2
                                     rounded-bl-2xl
@@ -201,8 +214,8 @@ const AddUser = () => {
                         <div className="flex lg:flex-row flex-col gap-x-4 lg:gap-y-0 gap-y-6">
                             <input
                                 onChange={handleChange}
-                                name="location"
-                                value={formData.location}
+                                name="area"
+                                value={formData.area}
                                 className="
                                 p-2
                                 rounded-bl-2xl
@@ -224,8 +237,8 @@ const AddUser = () => {
 
                             <input
                                 onChange={handleChange}
-                                name="STN"
-                                value={formData.STN}
+                                name="number"
+                                value={formData.number}
                                 className="
                                 p-2
                                 rounded-bl-2xl
@@ -307,9 +320,14 @@ const AddUser = () => {
                         >
                             Add Customer
                         </button>
+                        {renderResult()}
                     </form>
                 </div>
             </div>
+            <footer className="mt-20 lg:mt-40 text-white text-center mb-2">
+                <p>©2026 Cable Network Management System.</p>
+                <p>Developed by Tejas</p>
+            </footer>
         </div>
     );
 };

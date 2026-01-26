@@ -21,8 +21,9 @@ const getSingleCustomer = expressAsyncHandler ( async (req, res) => {
 })
 
 const createCustomer = expressAsyncHandler( async (req, res) => {
-    const createdCustomer = await customerModel.create(req.body);
-    if(!createCustomer) {
+    const data = req.body
+    const createdCustomer = await customerModel.create(data);
+    if(!createdCustomer) {
         res.status(404);
         throw new Error(`Error creating the customers`)
     }
@@ -30,6 +31,7 @@ const createCustomer = expressAsyncHandler( async (req, res) => {
 })
 
 const updateCustomer = expressAsyncHandler( async (req, res) => {
+    console.log(req.params.id)
     const customer = await customerModel.findById(req.params.id)
     if(!customer) {
         res.status(404);
