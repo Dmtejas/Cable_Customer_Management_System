@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../Components/Header";
+import '../Components/addUser.css'
 
 const AddUser = () => {
     const initialState = {
@@ -73,6 +74,7 @@ const AddUser = () => {
         <div>
             <Header />
             <div
+                 id="addUser"
                 className="
                 flex 
                 lg:flex-row

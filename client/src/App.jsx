@@ -5,6 +5,7 @@ import SearchUser from "./pages/SearchUser"
 import NotFound from "./pages/NotFound"
 import Dashboard from "./pages/Dashboard"
 import EditUser from "./pages/EditUser"
+import Loading from "./Components/Loading"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/search-user" element={<SearchUser/>}></Route>
             <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/editUser" element={<EditUser />}/>
+            <Route path="/loading" element={<Loading />} />
             <Route path="*" element={<NotFound />}/>
         </Routes>
     </div>

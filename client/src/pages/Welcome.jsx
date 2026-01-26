@@ -1,10 +1,17 @@
 import logo from "../assets/logo.jpg";
 import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
+import { useState } from "react";
+import Loading from "../Components/Loading";
+import '../Components/addUser.css'
 
 function Welcome() {
     const navigate = useNavigate();
+    const [addUser, setAddUser] = useState(false);
+
+
     return (
+      
         <div>
             <Header />
             <div className="max-w-32 mx-auto lg:pt-1">
@@ -15,7 +22,7 @@ function Welcome() {
         /> */}
             </div>
             <div className="max-w-screen-sm mx-auto p-10 lg:p-20 text-center flex flex-col items-center justify-center border-black rounded-2xl  border-none sm:max-w-screen-sm lg:max-w-screen-xl gap-y-9">
-                <h1 className="lg:text-[60px] text-3xl text-white">
+                <h1 id="heding" className="lg:text-[60px] text-3xl text-white font-black">
                     ಶ್ರೀ ಮಹದೇಶ್ವರ ಕೇಬಲ್ ನೆಟ್ವರ್ಕ್ಸ್
                 </h1>
                 <p className="text-zinc-200 lg:text-2xl text-xl font-normal text-pretty italic underline">
@@ -37,8 +44,7 @@ function Welcome() {
                         type="button"
                         onClick={() => {
                             console.log("BUTTON CLICKED");
-
-                            navigate("/addUser");
+                            navigate('/addUser')
                         }}
                         className="bg-white px-8 py-2 rounded-md text-center font-semibold transition-all duration-300 ease-in-out  hover:bg-black hover:text-white  hover:scale-110 hover:shadow-lg"
                     >
