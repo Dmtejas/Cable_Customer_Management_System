@@ -6,8 +6,6 @@ const DivElement = ({data, heading}) => {
             font-semibold
             p-4
             text-white
-            shadow-2xl
-            rounded-full
             border
             border-b-white
             border-t-0

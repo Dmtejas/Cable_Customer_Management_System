@@ -166,10 +166,10 @@ const SearchUser = () => {
                 </form>
                 <Card data={filteredState} />
             </div>
-            <footer className="mt-20 lg:mt-40 text-white text-center">
-                    <p>©2026 Cable Network Management System.</p>
-                    <p>Developed by Tejas</p>
-                </footer>
+            <footer className="mt-20 lg:mt-40 text-white text-center mb-2">
+                <p>©2026 Cable Network Management System.</p>
+                <p>Developed by Tejas</p>
+            </footer>
         </div>
     );
 };

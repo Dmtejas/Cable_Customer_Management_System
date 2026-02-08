@@ -8,11 +8,11 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between bg-white p-2">
+      <div className="flex justify-between bg-blue-950 p-2 border border-white">
         <button onClick={() => setShow(!show)}>
-          <img className="size-10" src={hamburger} alt="hamburger" />
+          <img className="size-10 rounded-full" src={hamburger} alt="hamburger" />
         </button>
-        <h1 className="font-black text-3xl text-blue-700">GTPL</h1>
+        <h1 className="font-black text-3xl text-white">GTPL</h1>
       </div>
 
       <div
