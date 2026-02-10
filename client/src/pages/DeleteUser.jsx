@@ -18,7 +18,7 @@ const DeleteUser = ({
 
     const deleteData = async () => {
         try {
-            const apiResponse = await fetch(`/api/customers/${id}`, {
+            const apiResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/customers/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

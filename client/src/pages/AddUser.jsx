@@ -26,7 +26,7 @@ const AddUser = () => {
 
     const sendFormData = async () => {
         try {
-            const response = await fetch("/api/customers", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/customers`, {
             method: 'POST',
             headers: {
                 'Content-Type': "application/json"
