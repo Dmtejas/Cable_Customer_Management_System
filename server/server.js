@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv'
 import { errorHandler } from './middleware/errorHandler.js';
 import { dbConnection } from './config/dbConnection.js';
-const cors = require("cors");
+import cors from 'cors'
 app.use(cors({
   origin: "*"
 }));
