@@ -6,6 +6,10 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv'
 import { errorHandler } from './middleware/errorHandler.js';
 import { dbConnection } from './config/dbConnection.js';
+const cors = require("cors");
+app.use(cors({
+  origin: "*"
+}));
 dotenv.config()
 const PORT = process.env.PORT || 3001
 

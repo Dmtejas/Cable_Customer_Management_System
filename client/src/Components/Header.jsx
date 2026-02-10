@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between bg-blue-950 p-2 border border-white">
+      <div className="flex justify-between bg-transparent p-2">
         <button onClick={() => setShow(!show)}>
           <img className="size-10 rounded-full" src={hamburger} alt="hamburger" />
         </button>
