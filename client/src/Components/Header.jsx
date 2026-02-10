@@ -23,9 +23,9 @@ const Header = () => {
                     </button> */}
                     <img src={favicon} className="mt-1 lg:mt-0 size-7 lg:size-12 rounded-full" alt="" />
                     <div className="flex justify-between w-28 lg:w-72 text-white text-xs lg:text-xl font-thin lg:gap-x-6">
-                        <button className={location.pathname === '/' ? `bg-white text-black p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-5`} onClick={() => navigate('/')}>HOME</button>
-                        <button className={location.pathname === '/addUser' ? `bg-white text-black p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-5`} onClick={() => navigate('/addUser')}>SEARCH</button>
-                        <button className={location.pathname === '/search-user' ? `bg-white text-black p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-5`} onClick={() => navigate('/search-user')}>ADD</button>
+                        <button className={location.pathname === '/' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/')}>HOME</button>
+                        <button className={location.pathname === '/addUser' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/addUser')}>SEARCH</button>
+                        <button className={location.pathname === '/search-user' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/search-user')}>ADD</button>
                     </div>
                 </div>  
 
