@@ -1,7 +1,7 @@
 import { useState } from "react";
 import hamburger from "../assets/hamburger.jpg";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import favicon from '../assets/favicon.png'
+import headerLogo from '../assets/headerLogo.png'
 
 const Header = () => {
     const navigate = useNavigate();
@@ -21,11 +21,11 @@ const Header = () => {
                             alt="hamburger"
                         />
                     </button> */}
-                    <img src={favicon} className="mt-1 lg:mt-0 size-7 lg:size-12 rounded-full" alt="" />
+                    <img src={headerLogo} className="mt-1 lg:mt-0 size-7 lg:size-12 rounded-full" alt="" />
                     <div className="flex justify-between w-28 lg:w-72 text-white text-xs lg:text-xl font-thin lg:gap-x-6">
-                        <button className={location.pathname === '/' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/')}>HOME</button>
-                        <button className={location.pathname === '/addUser' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/addUser')}>SEARCH</button>
-                        <button className={location.pathname === '/search-user' ? `border p-1 rounded-xl lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/search-user')}>ADD</button>
+                        <button className={location.pathname === '/' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/')}>HOME</button>
+                        <button className={location.pathname === '/addUser' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/addUser')}>SEARCH</button>
+                        <button className={location.pathname === '/search-user' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/search-user')}>ADD</button>
                     </div>
                 </div>  
 

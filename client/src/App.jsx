@@ -9,7 +9,7 @@ import Loading from "./Components/Loading"
 
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-slate-900 to-slate-700">
         <Routes>
             <Route path="/" element={<Welcome />}></Route>
             <Route path="/addUser" element={<AddUser />} />

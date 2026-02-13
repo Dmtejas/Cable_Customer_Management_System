@@ -3,9 +3,21 @@
 @tailwind utilities;
 
 body {
-  /* background-color: black; */
-  background-image: url('./assets/background16.jpg');
+    /* background-color: black; */
+    /* background-image: url('./assets/background16.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+
+    /* background: hsla(225, 78%, 59%, 1);
+
+background: linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#456FE8", endColorstr="#19B0EC", GradientType=1 ); */
+
+    background: linear-gradient(to right, #0f172a, #334155);
 }
