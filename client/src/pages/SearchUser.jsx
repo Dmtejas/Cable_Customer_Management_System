@@ -10,7 +10,7 @@ const SearchUser = () => {
     const [formData, setFormData] = useState(initialState);
     const [initialData, setInitialData] = useState([]);
     const [filteredState, setFilteredState] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -41,13 +41,12 @@ const SearchUser = () => {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/customers`, {
             method: "GET",
         });
-
+        setLoading(true);
         if (response?.ok) {
             const result = await response.json();
             console.log(result);
             setInitialData(result);
             setFilteredState(result);
-            setLoading(true);
         }
     };
 
