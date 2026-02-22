@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <div className="relative">
-            <div className="flex justify-between bg-transparent p-4 border-2 border-t-0 border-l-0 border-r-0">
+            <div className="flex justify-between bg-transparent p-4 border-2 border-t-0 border-l-0 border-r-0 border-b-0">
                 <div className="flex gap-x-6 pl-2">
                     {/* <button onClick={() => setShow(!show)}>
                         <img
@@ -24,8 +24,8 @@ const Header = () => {
                     <img src={headerLogo} className="mt-1 lg:mt-0 size-7 lg:size-12 rounded-full" alt="" />
                     <div className="flex justify-between w-28 lg:w-72 text-white text-xs lg:text-xl font-thin lg:gap-x-6">
                         <button className={location.pathname === '/' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/')}>HOME</button>
-                        <button className={location.pathname === '/addUser' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/addUser')}>SEARCH</button>
-                        <button className={location.pathname === '/search-user' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/search-user')}>ADD</button>
+                        <button className={location.pathname === '/search-user' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/search-user')}>SEARCH</button>
+                        <button className={location.pathname === '/addUser' ? `border border-l-0 border-r-0 border-t-0 p-1 lg:px-8 ` : `p-1 rounded-xl lg:px-8`} onClick={() => navigate('/addUser')}>ADD</button>
                     </div>
                 </div>  
 

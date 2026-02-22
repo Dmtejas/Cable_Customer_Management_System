@@ -5,6 +5,7 @@ import { useState } from "react";
 import Loading from "../Components/Loading";
 import "../Components/addUser.css";
 import appLogo from '../assets/logo.png'
+import Dashboard from "../Components/Dashboard";
 
 function Welcome() {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Welcome() {
     return (
         <div>
             <Header />
-            <div className="w-1/4 mx-auto p-0">
+            <div className="lg:w-1/4 w-56 mx-auto p-0">
                 <img
           src={appLogo}
           alt=""
@@ -21,10 +22,10 @@ function Welcome() {
         />
             </div>
 
-            <div className="max-w-screen-sm mx-auto p-10 lg:p-20 lg:pt-0 text-center flex flex-col items-center justify-center border-black rounded-2xl  border-none sm:max-w-screen-sm lg:max-w-screen-xl gap-y-9">
+            <div className="max-w-screen-sm mx-auto p-10 pt-0 lg:p-20 lg:pt-0 text-center flex flex-col items-center justify-center border-black rounded-2xl  border-none sm:max-w-screen-sm lg:max-w-screen-xl gap-y-9">
                 <h1
                     id="heding"
-                    className="lg:text-[60px] text-3xl text-white font-black"
+                    className="lg:text-[60px] text-4xl text-white font-black"
                 >
                     ಶ್ರೀ ಮಹದೇಶ್ವರ ಕೇಬಲ್ ನೆಟ್ವರ್ಕ್ಸ್
                 </h1>
@@ -97,6 +98,7 @@ function Welcome() {
                         </button>
                     </div>
                 </div>
+                <Dashboard />
             </div>
             <footer className="mt-20 lg:mt-40 text-white text-center mb-2">
                 <p>©2026 Cable Network Management System.</p>

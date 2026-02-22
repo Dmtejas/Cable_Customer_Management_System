@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import Header from "../Components/Header";
+import Waiting from "../Components/Waiting";
 
 const SearchUser = () => {
     const initialState = {
@@ -9,6 +10,7 @@ const SearchUser = () => {
     const [formData, setFormData] = useState(initialState);
     const [initialData, setInitialData] = useState([]);
     const [filteredState, setFilteredState] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -45,6 +47,7 @@ const SearchUser = () => {
             console.log(result);
             setInitialData(result);
             setFilteredState(result);
+            setLoading(true);
         }
     };
 
@@ -81,6 +84,19 @@ const SearchUser = () => {
         // const apiResponse = fetchData();
         // console.log(apiResponse);
     };
+
+
+    const renderCard = () => {
+        if(!loading) {
+            return (
+                <Waiting />
+            )
+        } else {
+            return (
+                <Card data={filteredState} />
+            )
+        }
+    }
 
     return (
         <div>
@@ -164,7 +180,7 @@ const SearchUser = () => {
                         Search Customer
                     </button> */}
                 </form>
-                <Card data={filteredState} />
+                {renderCard()}
             </div>
             <footer className="mt-20 lg:mt-40 text-white text-center mb-2">
                 <p>©2026 Cable Network Management System.</p>
